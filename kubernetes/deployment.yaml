@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1 
+kind: Deployment 
+metadata: 
+  name: swing-tps-res
+  namespace: mwportal
+  labels: 
+    app: swing-tps-res
+spec: 
+  replicas: 1 
+  template: 
+    metadata: 
+      labels: 
+        app: swing-tps-res
+    spec: 
+      containers: 
+      - name: springboot
+        image: myregistry.mwportal.com:30001/mwportal/swing-tps-res:1.0
+        imagePullPolicy: Always        
+        ports: 
+        - containerPort: 8080 
+          name: http 
+          protocol: TCP
+        volumeMounts:
+        - name: timezone-config
+          mountPath: /etc/localtime
+      volumes:
+      - name: timezone-config
+        hostPath:
+          path: /usr/share/zoneinfo/Asia/Seoul
+      nodeSelector:
+        node-role.kubernetes.io/worker: "true"
