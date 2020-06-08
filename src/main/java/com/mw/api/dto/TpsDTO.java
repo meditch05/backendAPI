@@ -1,4 +1,4 @@
-package com.mw.enpharos.dto;
+package com.mw.api.dto;
 
 import lombok.Getter;
 

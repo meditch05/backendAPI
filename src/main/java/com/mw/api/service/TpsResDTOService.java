@@ -1,4 +1,4 @@
-package com.mw.enpharos.service;
+package com.mw.api.service;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -11,8 +11,8 @@ import javax.persistence.Query;
 import org.qlrm.mapper.JpaResultMapper;
 import org.springframework.stereotype.Service;
 
-import com.mw.enpharos.dto.TpsDTO;
-import com.mw.enpharos.dto.TpsResDTO;
+import com.mw.api.dto.TpsDTO;
+import com.mw.api.dto.TpsResDTO;
 
 @Service
 public class TpsResDTOService {

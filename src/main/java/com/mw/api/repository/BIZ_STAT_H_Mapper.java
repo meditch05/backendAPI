@@ -1,4 +1,4 @@
-package com.mw.enpharos.repository;
+package com.mw.api.repository;
 
 import org.qlrm.mapper.JpaResultMapper;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.mw.enpharos.dto.TpsResDTO;
-import com.mw.enpharos.entity.BIZ_STAT_H;
+import com.mw.api.dto.TpsResDTO;
+import com.mw.api.entity.BIZ_STAT_H;
 
 import java.sql.Timestamp;
 import java.util.List;

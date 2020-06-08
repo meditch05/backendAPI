@@ -1,4 +1,4 @@
-package com.mw.enpharos.entity;
+package com.mw.api.entity;
 
 import java.sql.Timestamp;
 

@@ -1,4 +1,4 @@
-package com.mw.enpharos.datasource;
+package com.mw.api.datasource;
 
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -22,9 +22,9 @@ import java.util.Map;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
-        basePackages = "com.mw.enpharos.repository", // TODO Repository 패키지 지정
-        transactionManagerRef = "trkp_transactionManager",
-        entityManagerFactoryRef = "trkp_entityManagerFactory"
+        basePackages = "com.mw.api.repository", // TODO Repository 패키지 지정
+        transactionManagerRef = "ukyung_transactionManager",
+        entityManagerFactoryRef = "ukyung_entityManagerFactory"
 )
 public class DBConfig {
 	
@@ -42,22 +42,22 @@ public class DBConfig {
 	 */
 	
     @Primary
-    @Bean(name = "trkp_dataSource")
-    @ConfigurationProperties("spring.datasource") // application.properties에서 설정한 DataSource명
+    @Bean(name = "ukyung_dataSource")
+    @ConfigurationProperties("spring.datasource.ukyungdb") // application.properties에서 설정한 DataSource명
     public DataSource mariaDataSource() {
         return DataSourceBuilder.create().type(HikariDataSource.class).build();
     }
 
     @Primary
-    @Bean(name = "trkp_entityManagerFactory")
+    @Bean(name = "ukyung_entityManagerFactory")
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(
             EntityManagerFactoryBuilder builder,
-            @Qualifier("trkp_dataSource") DataSource dataSource) {
+            @Qualifier("ukyung_dataSource") DataSource dataSource) {
         Map<String, String> map = new HashMap<>();
         map.put("hibernate.ejb.naming_strategy", "org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy");
         map.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
         return builder.dataSource(dataSource)
-                .packages("com.mw.enpharos.entity") // TODO Model 패키지 지정
+                .packages("com.mw.api.entity") // TODO Model 패키지 지정
                 .properties(map)
                 .build();
     }

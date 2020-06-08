@@ -1,4 +1,4 @@
-package com.mw.enpharos.controller;
+package com.mw.api.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

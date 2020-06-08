@@ -1,4 +1,4 @@
-package com.mw.enpharos.controller.restapi;
+package com.mw.api.controller.restapi;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -9,11 +9,11 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.mw.enpharos.dto.TpsDTO;
-import com.mw.enpharos.dto.TpsResDTO;
-import com.mw.enpharos.entity.BIZ_STAT_H;
-import com.mw.enpharos.repository.BIZ_STAT_H_Mapper;
-import com.mw.enpharos.service.TpsResDTOService;
+import com.mw.api.dto.TpsDTO;
+import com.mw.api.dto.TpsResDTO;
+import com.mw.api.entity.BIZ_STAT_H;
+import com.mw.api.repository.BIZ_STAT_H_Mapper;
+import com.mw.api.service.TpsResDTOService;
 
 import oracle.sql.TIMESTAMP;
 
