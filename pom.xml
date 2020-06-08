@@ -87,6 +87,13 @@
 			<systemPath>${user.home}/.m2/repository/com/oracle/ojdbc8/12.2.0.1/ojdbc8-12.2.0.1.jar</systemPath>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
+		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>2.5.4</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.zaxxer</groupId>
 			<artifactId>HikariCP</artifactId>
