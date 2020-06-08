@@ -31,14 +31,11 @@ public class DBConfig {
 	/* ====================================================
 	 * application.properties 설정
 	 * ====================================================
-		spring.datasource.mariadb.jdbc-url=jdbc:mariadb://127.0.0.1:3306/test
-		spring.datasource.mariadb.driver-class-name=org.mariadb.jdbc.Driver
-		spring.datasource.mariadb.username=root
-		spring.datasource.mariadb.password=alskfl12~!
-		spring.jpa.open-in-view=false
-		spring.jpa.generate-ddl=true
+		spring.datasource.ukyungdb.jdbc-url: jdbc:mariadb:sequential://ffp-ukyung-db.cnywahflqyqb.ap-northeast-2.rds.amazonaws.com:3306/ukyungdb?autoReconnect=true&failOverReadOnly=false&connectTimeout=1500&socketTimeout=10000
+		spring.datasource.ukyungdb.driver-class-name: org.mariadb.jdbc.Driver
+		spring.datasource.ukyungdb.username=app
+		spring.datasource.ukyungdb.password=sktngm12
 		spring.jpa.show-sql=true
-		spring.jpa.hibernate.ddl-auto=update
 	 */
 	
     @Primary
