@@ -11,9 +11,9 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.mw.api.dto.TpsDTO;
 import com.mw.api.dto.TpsResDTO;
-import com.mw.api.entity.BIZ_STAT_H;
-import com.mw.api.repository.BIZ_STAT_H_Mapper;
-import com.mw.api.service.TpsResDTOService;
+import com.mw.api.entity.Salaries;
+import com.mw.api.repository.Salaries_Mapper;
+import com.mw.api.service.SalariesDTOService;
 
 import oracle.sql.TIMESTAMP;
 
@@ -34,7 +34,7 @@ public class RestAPIController {
     // private BIZ_STAT_H_Mapper h_Mapper;
     
     @Autowired
-    private TpsResDTOService tpsresdtoservice;
+    private SalariesDTOService tpsresdtoservice;
     
     // /get/swing/hour/tps_res/{yyyymmddhh}
     // /get/swing/hour/tps_res/period

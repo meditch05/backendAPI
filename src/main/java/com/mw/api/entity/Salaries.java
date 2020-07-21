@@ -14,13 +14,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /*
-	CREATE TABLE `BOARDS` (
-		`ID` 			int(11) NOT NULL AUTO_INCREMENT,
-		`USER_ID` 		int(10) unsigned NOT NULL,
-		`TITLE` 		varchar(45) NOT NULL,
-		`CONTENT` 		varchar(255) NOT NULL,
-		`CREATE_TIME`	datetime DEFAULT NULL,
-		PRIMARY KEY (`ID`)
+	CREATE TABLE `Salaries` (
+		`emp_no` 	int(11),
+		`salary` 	int(10),
+		`from_date`	date,
+		'to_date'	date,
+		PRIMARY KEY (`emp_no`, 	'from_date')
 	);
  */
 
@@ -28,8 +27,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "biz_stat_h")
-public class BIZ_STAT_H {
+@Table(name = "salaries")
+public class Salaries {
 	
 	// @Id
 	// 에러방지를 위한 어노테이션 2개 ( Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.example.sbt_sample.domain.User )

@@ -15,7 +15,7 @@ import com.mw.api.dto.TpsDTO;
 import com.mw.api.dto.TpsResDTO;
 
 @Service
-public class TpsResDTOService {
+public class SalariesDTOService {
 	
     ////////////////////////////////////////////////////
 	// Table List ( pharos_mw / sktngm12! 계정 )

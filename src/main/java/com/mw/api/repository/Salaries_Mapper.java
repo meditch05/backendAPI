@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.mw.api.dto.TpsResDTO;
-import com.mw.api.entity.BIZ_STAT_H;
+import com.mw.api.entity.Salaries;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -22,13 +22,13 @@ import java.util.List;
 */
 	
 @Repository
-public interface BIZ_STAT_H_Mapper extends JpaRepository<BIZ_STAT_H, Long>{
+public interface Salaries_Mapper extends JpaRepository<Salaries, Long>{
 	
-	List<BIZ_STAT_H> findAll();
+	List<Salaries> findAll();
 
-	BIZ_STAT_H findByTimeslice(@Param("timeslice") Timestamp timeslice);
+	Salaries findByTimeslice(@Param("timeslice") Timestamp timeslice);
 	
-	BIZ_STAT_H findByTxcode(@Param("tx_code") String txcode);
+	Salaries findByTxcode(@Param("tx_code") String txcode);
 	
 	
 	/*
